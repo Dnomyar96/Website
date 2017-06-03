@@ -1,0 +1,78 @@
+﻿@model Dnomyar.Web.MTG.Models.Home.HomeVM
+@{
+    ViewBag.Title = "Cards";
+}
+
+<style>
+    tbody :hover {
+        background-color: gray;
+        color: white;
+    }
+</style>
+
+<div class="row">
+    <h3>Cards</h3>
+</div>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Colors</th>
+                <th>Rarity</th>
+                <th>Set</th>
+                <th>SetName</th>
+                <th>Type</th>
+                <th>Text</th>
+                <th>ImageUrl</th>
+                <th>Loyalty</th>
+                <th>ManaCost</th>
+                <th>Power</th>
+                <th>Toughness</th>
+                <th>Flavor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var card in Model.Cards)
+            {
+                <tr>
+                    <td>@card.Id</td>
+                    <td>@card.Name</td>
+                    <td>@string.Join(";", card.Colors)</td>
+                    <td>@card.Rarity</td>
+                    <td>@card.Set</td>
+                    <td>@card.SetName</td>
+                    <td>@card.Type</td>
+                    <td>
+                        @if (card.Text != null)
+                        {
+                            <span>Exists</span>
+                        }
+                    </td>
+                    <td>
+                        @if (card.ImageUrl != null)
+                        {
+                            <span>Exists</span>
+                        }
+                    </td>
+                    <td>@card.Loyalty</td>
+                    <td>@card.ManaCost</td>
+                    <td>@card.Power</td>
+                    <td>@card.Toughness</td>
+                    <td>
+                        @if (card.Flavor != null)
+                        {
+                            <span>Exists</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="row">
+    @Html.ActionLink("Insert data", "Insert")
+</div>

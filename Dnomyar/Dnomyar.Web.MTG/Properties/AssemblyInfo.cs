@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Dnomyar.Web")]
+[assembly: AssemblyTitle("Dnomyar.Web.MTG")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Dnomyar.Web")]
+[assembly: AssemblyProduct("Dnomyar.Web.MTG")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7f34e90d-a7f7-4da6-a93e-cd5665fbde8b")]
+[assembly: Guid("624004e1-ba48-491d-9fb3-eb84921da9c8")]
 
 // Version information for an assembly consists of the following four values:
 //
