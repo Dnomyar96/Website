@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Dnomyar.Web.MTG
+namespace Dnomyar.Web
 {
     public class BundleConfig
     {
