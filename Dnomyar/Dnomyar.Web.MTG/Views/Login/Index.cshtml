@@ -1,0 +1,64 @@
+﻿@model Dnomyar.Web.MTG.Models.Login.LoginVM
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<style>
+    .row {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .login-from {
+        border: solid 1px black;
+        padding: 5px;
+        background-color: blanchedalmond;
+    }
+
+    .error {
+        background-color: red;
+        color: white;
+        padding: 2px;
+    }
+</style>
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Login"))
+{
+    <div class="row">
+        <div class="login-from col-lg-4">
+            @if(!string.IsNullOrWhiteSpace(Model.Error))
+            {
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="error">@Model.Error</span>
+                    </div>
+                </div>
+            }
+            <div class="row">
+                <div class="col-lg-5">
+                    <span>Username</span>
+                </div>
+                <div class="col-lg-7">
+                    @Html.TextBoxFor(m => m.UserName)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <span>Password</span>
+                </div>
+                <div class="col-lg-7">
+                    @Html.PasswordFor(m => m.Password)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">&nbsp;</div>
+                <div class="col-lg-7">
+                    <input type="submit" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -17,11 +17,10 @@ namespace Dnomyar.Web.MTG.Controllers
     {
         public ActionResult Index()
         {
-            var vm = new HomeVM();
-            var dbHandler = new DbHandler();
-            vm.Cards = dbHandler.GetAllCards();
+            if (!CurrentUser.GetCurrentUser().IsLoggedIn)
+                return RedirectToAction("Index", "Login");
 
-            return View(vm);
+            return View();
         }
         public ActionResult Cards()
         {
@@ -104,13 +103,6 @@ namespace Dnomyar.Web.MTG.Controllers
             }
 
             return RedirectToAction("Cards");
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

@@ -46,15 +46,15 @@
                     <td>@card.SetName</td>
                     <td>@card.Type</td>
                     <td>
-                        @if (card.Text != null)
+                        @if (!string.IsNullOrWhiteSpace(card.Text))
                         {
-                            <span>Exists</span>
+                            <span>...</span>
                         }
                     </td>
                     <td>
-                        @if (card.ImageUrl != null)
+                        @if (!string.IsNullOrWhiteSpace(card.ImageUrl))
                         {
-                            <span>Exists</span>
+                            <span>...</span>
                         }
                     </td>
                     <td>@card.Loyalty</td>
@@ -62,9 +62,9 @@
                     <td>@card.Power</td>
                     <td>@card.Toughness</td>
                     <td>
-                        @if (card.Flavor != null)
+                        @if (!string.IsNullOrWhiteSpace(card.Flavor))
                         {
-                            <span>Exists</span>
+                            <span>...</span>
                         }
                     </td>
                 </tr>
